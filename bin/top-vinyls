@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "hello user"
+require_relative '../lib/top_vinyls'
+
+TopVinyls::CLI.new.start

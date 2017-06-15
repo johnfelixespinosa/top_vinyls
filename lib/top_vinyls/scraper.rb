@@ -1,0 +1,3 @@
+class TopVinyls::Scraper
+
+end
