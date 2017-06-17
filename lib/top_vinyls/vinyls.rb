@@ -20,14 +20,4 @@ class TopVinyls::Vinyls
     @@all
   end
 
-  def self.print
-    puts ""
-    puts "---------- Current List ----------"
-    puts ""
-    TopVinyls::Vinyls.all.each.with_index(1) do |vinyls, i|
-      puts "#{i}. #{vinyls.name}"
-      puts ""
-    end
-  end
-
 end
