@@ -1,13 +1,13 @@
 class TopVinyls::Vinyls
 
-  attr_accessor :position, :name, :artist, :year
+  attr_accessor :position, :name, :url, :artist, :year
 
   @@all = []
 
-  def initialize(position=nil, name=nil)#, year=nil)
+  def initialize(position=nil, name=nil, url=nil)#, year=nil)
     @position = position
     @name = name
-    #@year = year
+    @url = url
     @@all << self
   end
 

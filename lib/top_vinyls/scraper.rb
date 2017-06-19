@@ -26,8 +26,12 @@ class TopVinyls::Scraper
   def new_from_scraper(x)
     TopVinyls::Vinyls.new(
       x.css(".listitem_data").css(".listitem_comment").css("p").text,
-      x.css(".listitem_data").css("a").text
+      x.css(".listitem_data").css("a").text,
+      x.css(".listitem_data").css(".listitem_title").css("a").attribute("href").text
       )
+  end
+
+  def get_album_page()
   end
 
 end

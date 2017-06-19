@@ -35,7 +35,7 @@ class TopVinyls::CLI
       puts "#{vinyls.position}. #{vinyls.name}"
       puts ""
     end
-    #binding.pry
+    binding.pry
   end
 
 end
