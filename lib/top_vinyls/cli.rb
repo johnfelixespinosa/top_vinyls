@@ -22,12 +22,11 @@ class TopVinyls::CLI
       start
     else
       TopVinyls::Scraper.new.make_list(input)
-      print
-      #binding.pry
+      print_list
     end
   end
 
-  def print
+  def print_list
     puts ""
     puts "---------- Current List ----------"
     puts ""
@@ -35,7 +34,15 @@ class TopVinyls::CLI
       puts "#{vinyls.position}. #{vinyls.name}"
       puts ""
     end
-    binding.pry
+    which_album
   end
+
+  def which_album
+    puts ""
+    puts "Which album would you like more information about?"
+    puts "Enter Album number : "
+  end
+
+
 
 end

@@ -15,4 +15,12 @@ class TopVinyls::Vinyls
     @@all
   end
 
+  def list_position
+    @list = []
+    @@all.collect do |album|
+      @list << album[:position]
+    end
+    list
+  end
+
 end
