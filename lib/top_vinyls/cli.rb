@@ -31,8 +31,8 @@ class TopVinyls::CLI
     puts ""
     puts "---------- Current List ----------"
     puts ""
-    TopVinyls::Vinyls.all.each.with_index(1) do |vinyls, i|
-      puts "#{i}. #{vinyls.name}"
+    TopVinyls::Vinyls.all.each do |vinyls|
+      puts "#{vinyls.position}. #{vinyls.name}"
       puts ""
     end
     #binding.pry
