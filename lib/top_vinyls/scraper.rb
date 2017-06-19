@@ -19,8 +19,15 @@ class TopVinyls::Scraper
 
   def make_list(input)
     scrape_list(input).each do |x|
-      TopVinyls::Vinyls.new_from_scraper(x)
+      new_from_scraper(x)
     end
+  end
+
+  def new_from_scraper(x)
+    TopVinyls::Vinyls.new(
+      x.css(".listitem_data").css(".listitem_comment").css("p").text,
+      x.css(".listitem_data").css("a").text
+      )
   end
 
 end
