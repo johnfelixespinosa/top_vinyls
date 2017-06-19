@@ -6,7 +6,7 @@ class TopVinyls::Vinyls
 
   def self.new_from_scraper(x)
     self.new(
-      x.css("h3 a").text
+      x.css(".listitem_data").css("a").text
       )
   end
 
