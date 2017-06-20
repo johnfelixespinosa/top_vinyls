@@ -74,7 +74,7 @@ class TopVinyls::CLI
       range = (75..99)
     end
 
-    num = gets.chomp.to_i
+      num = gets.chomp.to_i
 
     if !range.include?(num)
       puts "Please try again"
@@ -84,8 +84,4 @@ class TopVinyls::CLI
     end
   end
     
-
-
-
-
 end

@@ -15,7 +15,4 @@ class TopVinyls::Vinyls
     @@all
   end
 
-
-
-
 end

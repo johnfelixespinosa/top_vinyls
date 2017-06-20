@@ -31,7 +31,6 @@ class TopVinyls::Scraper
       )
   end
 
-
 end
 
 #?page=2
