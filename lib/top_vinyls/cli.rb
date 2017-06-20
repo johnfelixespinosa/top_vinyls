@@ -21,18 +21,38 @@ class TopVinyls::CLI
       puts "Please try again"
       start
     else
-      TopVinyls::Scraper.new.make_list(input)
-      print_list
+      TopVinyls::Scraper.new.make_list(1)
+      TopVinyls::Scraper.new.make_list(2)
+      TopVinyls::Scraper.new.make_list(3)
+      TopVinyls::Scraper.new.make_list(4)
+      print_list(input)
     end
   end
 
-  def print_list
+  def print_list(input)
     puts ""
     puts "---------- Current List ----------"
     puts ""
-    TopVinyls::Vinyls.all.each do |vinyls|
-      puts "#{vinyls.position}. #{vinyls.name}"
-      puts ""
+    if input == 1
+      TopVinyls::Vinyls.all[0..24].each do |vinyls|
+        puts "#{vinyls.position}. #{vinyls.name}"
+        puts ""
+      end
+    elsif input == 2
+      TopVinyls::Vinyls.all[25..49].each do |vinyls|
+        puts "#{vinyls.position}. #{vinyls.name}"
+        puts ""
+      end
+    elsif input == 3
+      TopVinyls::Vinyls.all[50..74].each do |vinyls|
+        puts "#{vinyls.position}. #{vinyls.name}"
+        puts ""
+      end
+    elsif input == 4
+      TopVinyls::Vinyls.all[75..99].each do |vinyls|
+        puts "#{vinyls.position}. #{vinyls.name}"
+        puts ""
+      end
     end
     which_album
   end
@@ -41,6 +61,7 @@ class TopVinyls::CLI
     puts ""
     puts "Which album would you like more information about?"
     puts "Enter Album number : "
+    binding.pry
   end
 
 
