@@ -54,15 +54,37 @@ class TopVinyls::CLI
         puts ""
       end
     end
-    which_album
+    which_album(input)
   end
 
-  def which_album
+  def which_album(input)
+    range = ()
+      
     puts ""
     puts "Which album would you like more information about?"
     puts "Enter Album number : "
-    binding.pry
+
+    if input == 1
+      range = (0..24)
+    elsif input == 2
+      range = (25..49)
+    elsif input == 3
+      range = (50..74)
+    elsif input == 4
+      range = (75..99)
+    end
+
+    num = gets.chomp.to_i
+
+    if !range.include?(num)
+      puts "Please try again"
+      which_album(input)
+    else
+      puts "ok"
+    end
   end
+    
+
 
 
 

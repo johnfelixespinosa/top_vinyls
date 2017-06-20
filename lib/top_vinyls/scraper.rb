@@ -1,10 +1,6 @@
 class TopVinyls::Scraper
   #require 'pry'
 
-  def self.pages
-    @@pages
-  end
-
   def get_page(input)
     if input == 1
       Nokogiri::HTML(open("https://www.discogs.com/lists/The-100-Greatest-Vinyl-Records-of-All-Time/271480"))

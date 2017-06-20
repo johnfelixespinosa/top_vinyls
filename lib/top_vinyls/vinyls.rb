@@ -1,6 +1,6 @@
 class TopVinyls::Vinyls
 
-  attr_accessor :position, :name, :url, :artist, :year
+  attr_accessor :position, :name, :url, :artist, :album_year
 
   @@all = []
 
@@ -15,12 +15,7 @@ class TopVinyls::Vinyls
     @@all
   end
 
-  def list_position
-    @list = []
-    @@all.collect do |album|
-      @list << album[:position]
-    end
-    list
-  end
+
+
 
 end
