@@ -81,6 +81,10 @@ class TopVinyls::CLI
       which_album(input)
     else
       puts "ok"
+      #Need to create Find method within vinyls.rb
+      #Create method within scraper.rb to scrape info per individual album
+      #HAVE -artist -year -position
+      #NEED -blurb -vinylsize -tracklisting
     end
   end
     
